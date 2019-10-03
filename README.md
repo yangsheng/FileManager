@@ -7,9 +7,10 @@
 - Import/Export files locally
 - Web Server
 - Bookmarks / Favorites
+- Markdown Editor
 
 # Features
 - View & Edit Files
 - Basic File Manager functions
 - App File Sharing
-- HTML Viewer
+- HTML Editor
