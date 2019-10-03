@@ -57,7 +57,12 @@
     EDVFileCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (![EDVManager isDir:[NSString stringWithFormat:@"%@/%@", [[EDVManager sharedInstance] currentPath], cell.textField.text]]) {
         [[EDVManager sharedInstance] selectFile:cell.textField.text];
-        [self performSegueWithIdentifier:@"file" sender:self];
+        NSString *filetype = [[NSMutableArray arrayWithArray:[cell.textField.text componentsSeparatedByString:@"."]] lastObject];
+        if ([filetype isEqualToString:@"html"]) {
+            [self performSegueWithIdentifier:@"html" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"file" sender:self];
+        }
     } else {
         [[EDVManager sharedInstance] openFolder:cell.textField.text];
         EDVFolderController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"folder"];

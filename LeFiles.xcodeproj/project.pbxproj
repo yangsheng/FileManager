@@ -22,6 +22,9 @@
 		4D694C2823460137008B935E /* EDVFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C2723460137008B935E /* EDVFileController.m */; };
 		4D694C2B2346088E008B935E /* EDVNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C2A2346088E008B935E /* EDVNewController.m */; };
 		4D694C4523463E14008B935E /* EDVRenameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C4323463E14008B935E /* EDVRenameController.m */; };
+		4D694C4823464E3A008B935E /* EDVWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C4723464E3A008B935E /* EDVWebController.m */; };
+		4D694C4B23465955008B935E /* EDVWebEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C4A23465955008B935E /* EDVWebEditorController.m */; };
+		4D694C4E23465964008B935E /* EDVWebPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C4D23465964008B935E /* EDVWebPreviewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,12 @@
 		4D694C3323461EA6008B935E /* shareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = shareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D694C4323463E14008B935E /* EDVRenameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDVRenameController.m; sourceTree = "<group>"; };
 		4D694C4423463E14008B935E /* EDVRenameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDVRenameController.h; sourceTree = "<group>"; };
+		4D694C4623464E3A008B935E /* EDVWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVWebController.h; sourceTree = "<group>"; };
+		4D694C4723464E3A008B935E /* EDVWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVWebController.m; sourceTree = "<group>"; };
+		4D694C4923465955008B935E /* EDVWebEditorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVWebEditorController.h; sourceTree = "<group>"; };
+		4D694C4A23465955008B935E /* EDVWebEditorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVWebEditorController.m; sourceTree = "<group>"; };
+		4D694C4C23465964008B935E /* EDVWebPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVWebPreviewController.h; sourceTree = "<group>"; };
+		4D694C4D23465964008B935E /* EDVWebPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVWebPreviewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +105,12 @@
 			children = (
 				4D3F1EA52344F6DE000F82D7 /* AppDelegate.h */,
 				4D3F1EA62344F6DE000F82D7 /* AppDelegate.m */,
+				4D694C4623464E3A008B935E /* EDVWebController.h */,
+				4D694C4723464E3A008B935E /* EDVWebController.m */,
+				4D694C4923465955008B935E /* EDVWebEditorController.h */,
+				4D694C4A23465955008B935E /* EDVWebEditorController.m */,
+				4D694C4C23465964008B935E /* EDVWebPreviewController.h */,
+				4D694C4D23465964008B935E /* EDVWebPreviewController.m */,
 				4D694C292346088E008B935E /* EDVNewController.h */,
 				4D694C2A2346088E008B935E /* EDVNewController.m */,
 				4D694C4423463E14008B935E /* EDVRenameController.h */,
@@ -224,13 +239,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3F1EC92344F966000F82D7 /* UIImage+getIcon.m in Sources */,
+				4D694C4B23465955008B935E /* EDVWebEditorController.m in Sources */,
 				4D3F1EC42344F6F1000F82D7 /* EDVFolderController.m in Sources */,
 				4D3F1EC62344F6F1000F82D7 /* NSError+logError.m in Sources */,
 				4D694C4523463E14008B935E /* EDVRenameController.m in Sources */,
 				4D694C2B2346088E008B935E /* EDVNewController.m in Sources */,
 				4D3F1EB52344F6DF000F82D7 /* main.m in Sources */,
+				4D694C4E23465964008B935E /* EDVWebPreviewController.m in Sources */,
 				4D3F1EC52344F6F1000F82D7 /* EDVManager.m in Sources */,
 				4D3F1EC32344F6F1000F82D7 /* EDVMainController.m in Sources */,
+				4D694C4823464E3A008B935E /* EDVWebController.m in Sources */,
 				4D3F1EA72344F6DE000F82D7 /* AppDelegate.m in Sources */,
 				4D5AECDA2345FBD800FF48DA /* EDVFileCell.m in Sources */,
 				4D694C2523460114008B935E /* EDVMainFileController.m in Sources */,

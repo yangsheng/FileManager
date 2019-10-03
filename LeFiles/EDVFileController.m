@@ -26,8 +26,7 @@
 - (IBAction)save:(id)sender {
     NSError *error;
     [self.textView.text writeToFile:[[EDVManager sharedInstance] selectedFile] atomically:NO encoding:NSUTF8StringEncoding error:&error];
-    if (error) [error log];
-    if (!error) [self cancel:self];
+    error ? [error log] : [self cancel:self];
 }
 
 - (IBAction)cancel:(id)sender {

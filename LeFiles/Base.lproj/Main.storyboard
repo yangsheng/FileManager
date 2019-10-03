@@ -61,6 +61,7 @@
                     <connections>
                         <segue destination="ZeL-Pq-fwe" kind="presentation" identifier="file" id="vM3-bB-j0r"/>
                         <segue destination="8Iy-Kj-cfo" kind="presentation" identifier="rename" modalPresentationStyle="overFullScreen" id="U5H-Bq-Psz"/>
+                        <segue destination="DaQ-1S-wWA" kind="show" identifier="html" id="tas-Ka-3jZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cgc-ms-Ccj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,7 +130,7 @@
                             </connections>
                         </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     <viewLayoutGuide key="safeArea" id="2ym-er-Inv"/>
                 </view>
             </objects>
@@ -149,9 +150,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dld-aE-MhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="144"/>
+            <point key="canvasLocation" x="1041" y="143"/>
         </scene>
-        <!--File Controller-->
+        <!--File-->
         <scene sceneID="crg-KR-ejy">
             <objects>
                 <viewController id="Bwu-B7-bdX" customClass="EDVFileController" sceneMemberID="viewController">
@@ -159,10 +160,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jiE-xG-1eK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="File is empty." translatesAutoresizingMaskIntoConstraints="NO" id="jiE-xG-1eK">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -170,7 +170,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="vba-xN-goO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="idi-iF-hTv">
+                    <navigationItem key="navigationItem" title="File" id="idi-iF-hTv">
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="h6k-w9-SBJ">
                             <connections>
                                 <action selector="cancel:" destination="Bwu-B7-bdX" id="efg-Mg-Bh9"/>
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJt-YZ-csP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="143.47826086956522"/>
+            <point key="canvasLocation" x="1732" y="143"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="C6W-kK-vy0">
@@ -256,11 +256,143 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     <viewLayoutGuide key="safeArea" id="luq-bx-AOL"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="1041" y="-518"/>
+        </scene>
+        <!--Main File Controller-->
+        <scene sceneID="gvz-S4-mSf">
+            <objects>
+                <navigationController id="DaQ-1S-wWA" customClass="EDVMainFileController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wi0-9P-nLS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YV7-5X-r1w" kind="relationship" relationship="rootViewController" id="An2-zT-WBN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVs-Xt-hJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378" y="143"/>
+        </scene>
+        <!--Web Controller-->
+        <scene sceneID="D0v-h8-fX9">
+            <objects>
+                <viewController id="YV7-5X-r1w" customClass="EDVWebController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wNj-Ub-h6j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRk-Ct-WDA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="zL0-7B-J8j"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hTg-DR-a1g">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="Hyq-5P-lbM">
+                            <connections>
+                                <action selector="cancel:" destination="YV7-5X-r1w" id="wXf-2q-6Sr"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xYa-21-paK">
+                            <rect key="frame" x="125" y="7" width="125" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Editor"/>
+                                <segment title="Preview"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedChange:" destination="YV7-5X-r1w" eventType="valueChanged" id="ODk-7O-y7c"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="N7c-Nv-efw">
+                            <connections>
+                                <action selector="save:" destination="YV7-5X-r1w" id="Yti-tU-2O1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="mRk-Ct-WDA" id="lIO-Ap-Mg0"/>
+                        <outlet property="segmentedControl" destination="xYa-21-paK" id="6Zz-dP-pmJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55P-dD-HJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3021.5999999999999" y="142.57871064467767"/>
+        </scene>
+        <!--Web Editor Controller-->
+        <scene sceneID="qha-3x-zBn">
+            <objects>
+                <viewController storyboardIdentifier="webEditor" id="vhf-Jo-wCL" customClass="EDVWebEditorController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJh-0G-JvX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="File is empty." translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-fX-ydr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ulB-bH-WC9"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="5Hc-fX-ydr" id="lny-Ir-v2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGq-Pk-K82" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3689" y="173"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yKF-oG-Vlj">
+            <objects>
+                <viewController id="DSQ-dU-5MJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFg-UW-oLw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qk-e3-N3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Web Preview Controller-->
+        <scene sceneID="poR-Ug-V3E">
+            <objects>
+                <viewController storyboardIdentifier="webPreview" id="cjV-qK-9DY" customClass="EDVWebPreviewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="21N-5T-Mvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDg-7V-iNM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zFy-OK-jal"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="cDg-7V-iNM" id="gwB-SJ-Sv4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXS-7V-reE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4350" y="172"/>
         </scene>
     </scenes>
 </document>
