@@ -10,7 +10,7 @@
 #import "EDVMarkdownEditorController.h"
 #import "EDVMarkdownPreviewController.h"
 #import "EDVManager.h"
-#import <MMMarkdown/MMMarkdown.h>
+#import <TSMarkdownParser/TSMarkdownParser.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -28,18 +28,18 @@
 		4D694C54234665AF008B935E /* EDVMarkdownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C53234665AF008B935E /* EDVMarkdownController.m */; };
 		4D694C58234665C2008B935E /* EDVMarkdownEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C57234665C2008B935E /* EDVMarkdownEditorController.m */; };
 		4D694C5B234665D4008B935E /* EDVMarkdownPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C5A234665D4008B935E /* EDVMarkdownPreviewController.m */; };
-		4D694C63234667D9008B935E /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D694C5E234667A9008B935E /* MMMarkdown.framework */; };
-		4D694C64234667D9008B935E /* MMMarkdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D694C5E234667A9008B935E /* MMMarkdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D934C27234784FB00EF7F00 /* TSMarkdownParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D934C21234781F100EF7F00 /* TSMarkdownParser.framework */; };
+		4D934C28234784FB00EF7F00 /* TSMarkdownParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D934C21234781F100EF7F00 /* TSMarkdownParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4D694C65234667D9008B935E /* Embed Frameworks */ = {
+		4D934C29234784FB00EF7F00 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D694C64234667D9008B935E /* MMMarkdown.framework in Embed Frameworks */,
+				4D934C28234784FB00EF7F00 /* TSMarkdownParser.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +88,7 @@
 		4D694C57234665C2008B935E /* EDVMarkdownEditorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVMarkdownEditorController.m; sourceTree = "<group>"; };
 		4D694C59234665D4008B935E /* EDVMarkdownPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVMarkdownPreviewController.h; sourceTree = "<group>"; };
 		4D694C5A234665D4008B935E /* EDVMarkdownPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVMarkdownPreviewController.m; sourceTree = "<group>"; };
-		4D694C5E234667A9008B935E /* MMMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MMMarkdown.framework; sourceTree = "<group>"; };
+		4D934C21234781F100EF7F00 /* TSMarkdownParser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TSMarkdownParser.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D694C63234667D9008B935E /* MMMarkdown.framework in Frameworks */,
+				4D934C27234784FB00EF7F00 /* TSMarkdownParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +177,7 @@
 		4D694C4F2346651F008B935E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4D694C5E234667A9008B935E /* MMMarkdown.framework */,
+				4D934C21234781F100EF7F00 /* TSMarkdownParser.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 				4D3F1E9E2344F6DE000F82D7 /* Sources */,
 				4D3F1E9F2344F6DE000F82D7 /* Frameworks */,
 				4D3F1EA02344F6DE000F82D7 /* Resources */,
-				4D694C65234667D9008B935E /* Embed Frameworks */,
+				4D934C29234784FB00EF7F00 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

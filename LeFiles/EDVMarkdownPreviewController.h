@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <WebKit/WebKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EDVMarkdownPreviewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet WKWebView *webView;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) NSString *htmlString;
 
 @end

@@ -52,19 +52,16 @@
     EDVMarkdownEditorController *editor = [self.childViewControllers objectAtIndex:0];
     self.content = editor.textView.text;
     EDVMarkdownPreviewController *preview = [self.storyboard instantiateViewControllerWithIdentifier:@"mdPreview"];
-    NSLog(@"Start parsing");
-    NSMutableArray *lines = [NSMutableArray arrayWithArray:[self.content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
-    [lines enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *line = obj;
-        NSError *error;
-        line = [MMMarkdown HTMLStringWithMarkdown:line extensions:MMMarkdownExtensionsGitHubFlavored error:&error];
-        error ? [error log] : [lines replaceObjectAtIndex:idx withObject:line];
-    }];
-    preview.htmlString = [NSString stringWithFormat:@"<html><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>body {font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif}h1 {font-size: 18pt;font-weight: 700;}a {font-size: 11pt;}hr {height: 1px;border: none; background-color: #CDCED3;}h2 {font-size: 13pt;font-weight: 700;}a:link {text-decoration: none;color: #007AFF}</style></head><body>%@</body></html>", [lines componentsJoinedByString:@""]];
     [self.childViewControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
     [self.containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self addChildViewController:preview];
     preview.view.translatesAutoresizingMaskIntoConstraints = NO;
+    preview.textView.linkTextAttributes = @{NSUnderlineColorAttributeName: [UIColor clearColor], NSForegroundColorAttributeName:self.view.tintColor};
+    if (@available(iOS 13.0, *)) {
+        preview.textView.attributedText = [[TSMarkdownParser standardParser] attributedStringFromMarkdown:self.content attributes:@{NSForegroundColorAttributeName:[UIColor labelColor]}];
+    } else {
+        preview.textView.attributedText = [[TSMarkdownParser standardParser] attributedStringFromMarkdown:self.content];
+    }
     [self.containerView addSubview:preview.view];
     
     [NSLayoutConstraint activateConstraints:[NSArray arrayWithObjects:[preview.view.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor], [preview.view.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor], [preview.view.topAnchor constraintEqualToAnchor:self.containerView.topAnchor], [preview.view.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor], nil]];
