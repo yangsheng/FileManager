@@ -60,6 +60,8 @@
         NSString *filetype = [[NSMutableArray arrayWithArray:[cell.textField.text componentsSeparatedByString:@"."]] lastObject];
         if ([filetype isEqualToString:@"html"]) {
             [self performSegueWithIdentifier:@"html" sender:self];
+        } else if ([filetype isEqualToString:@"md"]) {
+            [self performSegueWithIdentifier:@"markdown" sender:self];
         } else {
             [self performSegueWithIdentifier:@"file" sender:self];
         }

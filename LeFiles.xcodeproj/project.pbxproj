@@ -25,7 +25,26 @@
 		4D694C4823464E3A008B935E /* EDVWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C4723464E3A008B935E /* EDVWebController.m */; };
 		4D694C4B23465955008B935E /* EDVWebEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C4A23465955008B935E /* EDVWebEditorController.m */; };
 		4D694C4E23465964008B935E /* EDVWebPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C4D23465964008B935E /* EDVWebPreviewController.m */; };
+		4D694C54234665AF008B935E /* EDVMarkdownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C53234665AF008B935E /* EDVMarkdownController.m */; };
+		4D694C58234665C2008B935E /* EDVMarkdownEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C57234665C2008B935E /* EDVMarkdownEditorController.m */; };
+		4D694C5B234665D4008B935E /* EDVMarkdownPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D694C5A234665D4008B935E /* EDVMarkdownPreviewController.m */; };
+		4D694C63234667D9008B935E /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D694C5E234667A9008B935E /* MMMarkdown.framework */; };
+		4D694C64234667D9008B935E /* MMMarkdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D694C5E234667A9008B935E /* MMMarkdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D694C65234667D9008B935E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D694C64234667D9008B935E /* MMMarkdown.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4D3F1EA22344F6DE000F82D7 /* LeFiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeFiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +82,13 @@
 		4D694C4A23465955008B935E /* EDVWebEditorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVWebEditorController.m; sourceTree = "<group>"; };
 		4D694C4C23465964008B935E /* EDVWebPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVWebPreviewController.h; sourceTree = "<group>"; };
 		4D694C4D23465964008B935E /* EDVWebPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVWebPreviewController.m; sourceTree = "<group>"; };
+		4D694C52234665AF008B935E /* EDVMarkdownController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVMarkdownController.h; sourceTree = "<group>"; };
+		4D694C53234665AF008B935E /* EDVMarkdownController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVMarkdownController.m; sourceTree = "<group>"; };
+		4D694C56234665C2008B935E /* EDVMarkdownEditorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVMarkdownEditorController.h; sourceTree = "<group>"; };
+		4D694C57234665C2008B935E /* EDVMarkdownEditorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVMarkdownEditorController.m; sourceTree = "<group>"; };
+		4D694C59234665D4008B935E /* EDVMarkdownPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDVMarkdownPreviewController.h; sourceTree = "<group>"; };
+		4D694C5A234665D4008B935E /* EDVMarkdownPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDVMarkdownPreviewController.m; sourceTree = "<group>"; };
+		4D694C5E234667A9008B935E /* MMMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MMMarkdown.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D694C63234667D9008B935E /* MMMarkdown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +115,7 @@
 			children = (
 				4D3F1EA42344F6DE000F82D7 /* LeFiles */,
 				4D3F1EA32344F6DE000F82D7 /* Products */,
+				4D694C4F2346651F008B935E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +133,12 @@
 			children = (
 				4D3F1EA52344F6DE000F82D7 /* AppDelegate.h */,
 				4D3F1EA62344F6DE000F82D7 /* AppDelegate.m */,
+				4D694C52234665AF008B935E /* EDVMarkdownController.h */,
+				4D694C53234665AF008B935E /* EDVMarkdownController.m */,
+				4D694C56234665C2008B935E /* EDVMarkdownEditorController.h */,
+				4D694C57234665C2008B935E /* EDVMarkdownEditorController.m */,
+				4D694C59234665D4008B935E /* EDVMarkdownPreviewController.h */,
+				4D694C5A234665D4008B935E /* EDVMarkdownPreviewController.m */,
 				4D694C4623464E3A008B935E /* EDVWebController.h */,
 				4D694C4723464E3A008B935E /* EDVWebController.m */,
 				4D694C4923465955008B935E /* EDVWebEditorController.h */,
@@ -140,6 +174,14 @@
 			path = LeFiles;
 			sourceTree = "<group>";
 		};
+		4D694C4F2346651F008B935E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D694C5E234667A9008B935E /* MMMarkdown.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +192,7 @@
 				4D3F1E9E2344F6DE000F82D7 /* Sources */,
 				4D3F1E9F2344F6DE000F82D7 /* Frameworks */,
 				4D3F1EA02344F6DE000F82D7 /* Resources */,
+				4D694C65234667D9008B935E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,12 +288,15 @@
 				4D694C4523463E14008B935E /* EDVRenameController.m in Sources */,
 				4D694C2B2346088E008B935E /* EDVNewController.m in Sources */,
 				4D3F1EB52344F6DF000F82D7 /* main.m in Sources */,
+				4D694C5B234665D4008B935E /* EDVMarkdownPreviewController.m in Sources */,
 				4D694C4E23465964008B935E /* EDVWebPreviewController.m in Sources */,
+				4D694C54234665AF008B935E /* EDVMarkdownController.m in Sources */,
 				4D3F1EC52344F6F1000F82D7 /* EDVManager.m in Sources */,
 				4D3F1EC32344F6F1000F82D7 /* EDVMainController.m in Sources */,
 				4D694C4823464E3A008B935E /* EDVWebController.m in Sources */,
 				4D3F1EA72344F6DE000F82D7 /* AppDelegate.m in Sources */,
 				4D5AECDA2345FBD800FF48DA /* EDVFileCell.m in Sources */,
+				4D694C58234665C2008B935E /* EDVMarkdownEditorController.m in Sources */,
 				4D694C2523460114008B935E /* EDVMainFileController.m in Sources */,
 				4D694C2823460137008B935E /* EDVFileController.m in Sources */,
 			);
@@ -403,6 +449,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9859KQSN8L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LeFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -421,6 +471,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9859KQSN8L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LeFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (

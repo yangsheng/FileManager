@@ -1,0 +1,24 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif
+}
+h1 {
+    font-size: 18pt;
+    font-weight: 700;
+}
+a {
+    font-size: 11pt;
+}
+hr {
+    height: 1px;
+    border: none;
+    background-color: #CDCED3;
+}
+h2 {
+    font-size: 13pt;
+    font-weight: 700;
+}
+
+a:link {
+    text-decoration: none;
+    color: #007AFF;
+}
