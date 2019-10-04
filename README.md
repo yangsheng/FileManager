@@ -7,10 +7,11 @@
 - Import/Export files locally
 - Web Server
 - Bookmarks / Favorites
-- Markdown Editor
+- Debian Archiving
 
 # Features
 - View & Edit Files
 - Basic File Manager functions
 - App File Sharing
 - HTML Editor
+- Markdown Editor
